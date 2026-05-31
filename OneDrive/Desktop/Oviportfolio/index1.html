@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oviya Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- LinkedIn Icon -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #e5e5e5;
+      overflow-x: hidden;
+    }
+
+    /* ================= NAVBAR (top-centered horizontal) ================= */
+    .navbar {
+  position: fixed;
+  top: 20px;
+  right: 42%;
+  transform: translateX(-40%);
+  background: rgba(0,0,0,0.9);
+  padding: 14px 45px;
+  border-radius: 50px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: navFade 1s ease forwards;
+}
+
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 6px 4px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transform: translateX(-50%);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      transform: translateY(-3px);
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+      outline: none;
+    }
+
+    @keyframes navFade {
+      from { opacity: 0; transform: translate(-50%, -20px); }
+      to   { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    /* Responsive: collapse to full-width top bar on small screens */
+    @media (max-width: 720px) {
+      .navbar {
+        left: 50%;
+        top: 12px;
+        transform: translateX(-50%);
+        padding: 8px 16px;
+        width: calc(100% - 40px);
+        border-radius: 12px;
+      }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 13px; }
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* LEFT SIDE */
+    .left {
+      width: 45%;
+      padding: 150px 80px;
+      background: #e5e5e5;
+    }
+
+    .left h4 {
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .left h1 {
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .left p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    
+
+    /* RIGHT SIDE */
+     .right {
+      width: 55%;
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.55)
+        ),
+        url("img/Ovi.jpeg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    }
+ .right {
+  transition: background-size 0.2s ease;
+}
+
+.right:hover {
+  background-size: 105%;
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-links">
+    <a href="index1.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="left">
+    <h4>Hello, I'm</h4>
+    <h1>OVIYA<br>SIVAKUMAR</h1>
+    <p>Front-end Developer | Website Designer & Developer</p>
+
+
+  </div>
+
+  <div class="right">
+    
+  </div>
+</section>
+
+</body>
+</html>

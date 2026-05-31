@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 48%;
+  transform: translateX(-40%);
+  background: rgba(0,0,0,0.9);
+  padding: 14px 45px;
+  border-radius: 50px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: navFade 1s ease forwards;
+}
+
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 6px 4px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transform: translateX(-50%);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      transform: translateY(-3px);
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+      outline: none;
+    }
+
+    @keyframes navFade {
+      from { opacity: 0; transform: translate(-50%, -20px); }
+      to   { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    /* Responsive: collapse to full-width top bar on small screens */
+    @media (max-width: 720px) {
+      .navbar {
+        left: 50%;
+        top: 12px;
+        transform: translateX(-50%);
+        padding: 8px 16px;
+        width: calc(100% - 40px);
+        border-radius: 12px;
+      }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 13px; }
+    }
+    
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #999;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+}
+
+.project-card {
+  background: #111;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: #222;
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.outline {
+  background: transparent;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #fff;
+  margin-top: 20px;
+}
+
+</style>
+<body>
+    <header class="navbar">
+  <div class="nav-links">
+    <a href="index1.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+
+ 
+  <section class="hero">
+    <div class="hero-text">
+      <h1>My Projects📊</h1>
+        <p>Explore some of the projects I've worked on recently.</p>
+    </div>
+    </section>
+
+  <section class="projects">
+<div class="project-card">
+  <img src="img/image-airbnb.webp" class="project-img" alt="Airbnb UI">
+  <div class="project-info">
+    <h2>Airbnb Login UI</h2>
+    <p>Responsive login page clone with social login buttons</p>
+    <div class="btns">
+      <a href="https://github.com/skovi1110/Airbnb-Clone/tree/main/AIRBNB%20clone" class="btn">View</a>
+      <a href="https://github.com/skovi1110/Airbnb-Clone/tree/main/AIRBNB%20clone" class="btn outline">Code</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="img/Agri.webp" class="project-img" alt="Agriculture ChatBot">
+  <div class="project-info">
+    <h2>Agricore</h2>
+    <p>Chatbot for agricultural advice and crop recommendations</p>
+    <div class="btns">
+      <a href="https://github.com/skovi1110/AgriCore" class="btn">View</a>
+      <a href="https://github.com/skovi1110/AgriCore/tree/main/AGRI%20FRT%20END/Agriculture%20project" class="btn outline">Code</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="img/Chatbot.png" class="project-img" alt="Airbnb UI">
+  <div class="project-info">
+    <h2>Agriculture ChatBot</h2>
+    <p>Chatbot for agricultural advice and crop recommendations</p>
+    <div class="btns">
+      <a href="https://github.com/skovi1110/agri-bot-speak" class="btn">View</a>
+      <a href="https://github.com/skovi1110/agri-bot-speak" class="btn outline">Code</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="img/Bank.webp" class="project-img" alt="Agriculture ChatBot">
+  <div class="project-info">
+    <h2>Bankmanagement System</h2>
+    <p>Using Springboot in Java to develope the Management System</p>
+    <div class="btns">
+      <a href="https://github.com/skovi1110/Bankmanagement-System" class="btn">View</a>
+      <a href="https://github.com/skovi1110/Bankmanagement-System" class="btn outline">Code</a>
+    </div>
+  </div>
+</div>
+   
+  </section>
+  <script>
+    const projects = [
+  {
+    title: "Airbnb Login UI",
+    desc: "Responsive login page clone with social login buttons",
+    img: "airbnb.png",
+    view: "#",
+    code: "#"
+  },
+  {
+    title: "Bank Management System",
+    desc: "Spring Boot project with account operations & UI",
+    img: "bank.png",
+    view: "#",
+    code: "#"
+  }
+];
+
+const container = document.getElementById("projects");
+
+projects.forEach(p => {
+  container.innerHTML += `
+    <div class="project-card">
+      <img src="${p.img}" class="project-img" alt="${p.title}">
+      <div class="project-info">
+        <h2>${p.title}</h2>
+        <p>${p.desc}</p>
+        <div class="btns">
+          <a href="${p.view}" class="btn">View</a>
+          <a href="${p.code}" class="btn outline">Code</a>
+        </div>
+      </div>
+    </div>
+  `;
+});
+
+  </script>
+
+ 
+</body>
+</html>

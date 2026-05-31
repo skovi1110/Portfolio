@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Oviya</title>
+
+<style>
+
+/* ================= NAVBAR ================= */
+ .navbar {
+  position: fixed;
+  top: 20px;
+  right: 42%;
+  transform: translateX(-40%);
+  background: rgba(0,0,0,0.9);
+  padding: 14px 45px;
+  border-radius: 50px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: navFade 1s ease forwards;
+}
+
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 6px 4px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transform: translateX(-50%);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      transform: translateY(-3px);
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+      outline: none;
+    }
+
+    @keyframes navFade {
+      from { opacity: 0; transform: translate(-50%, -20px); }
+      to   { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    /* Responsive: collapse to full-width top bar on small screens */
+    @media (max-width: 720px) {
+      .navbar {
+        left: 50%;
+        top: 12px;
+        transform: translateX(-50%);
+        padding: 8px 16px;
+        width: calc(100% - 40px);
+        border-radius: 12px;
+      }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 13px; }
+    }
+    
+
+/*  SKILLS SECTION */
+.skills-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 50px 80px;
+  background-color: #0b0b0b;
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  color: #fff;
+}
+
+.skills-header h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.skills-header p {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/*  GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 25px;
+}
+
+/*  SKILL CARD*/
+.skill-card {
+  background: linear-gradient(145deg, #111, #0c0c0c);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: 0.35s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.skill-card img {
+  width: 46px;
+  margin-bottom: 14px;
+}
+
+.skill-card h4 {
+  font-size: 16px;
+}
+
+.skill-card small {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* MongoDB card + Other skills card in same row */
+.skill-card.mongodb {
+  grid-column: span 1;
+}
+
+.other-skill-card {
+  max-width: 380px;
+  margin: 0; /* Remove auto margin */
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08),
+              0 15px 30px rgba(0,0,0,0.6);
+  transition: 0.3s;
+
+  /* Make it fit the grid */
+  align-self: stretch;
+  justify-self: center;
+}
+
+.other-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.other-content {
+  display: none;
+  margin-top: 12px;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.other-skill-card.active .other-content {
+  display: flex;
+}
+
+.tool {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  font-size: 13px;
+}
+
+.tool:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-links">
+    <a href="index1.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="skills-section">
+  <div class="skills-header">
+    <h2>Tech Stack</h2>
+    <p>Tools & technologies I use to build modern web applications</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+      <h4>HTML</h4>
+      <small>Semantic, SEO friendly</small>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+      <h4>CSS</h4>
+      <small>Flexbox, Grid</small>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+      <h4>JavaScript</h4>
+      <small>ES6+, DOM</small>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+      <h4>React</h4>
+      <small>Hooks, Components</small>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+      <h4>Node.js</h4>
+      <small>REST APIs</small>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+      <h4>SQL</h4>
+      <small>Queries, Joins</small>
+    </div>
+
+    <!-- MongoDB + Other Skills in same row -->
+    <div class="skill-card mongodb">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+      <h4>MongoDB</h4>
+      <small>NoSQL Database</small>
+    </div>
+
+    <div class="other-skill-card" onclick="this.classList.toggle('active')">
+      <div class="other-header">
+        <span>📊 Other Skills</span>
+        </div>
+        <br>
+        <div>
+        <span>⬇️Click Here </span>
+      </div>
+
+      <div class="other-content">
+        <div class="tool">Gamma AI</div>
+        <div class="tool">GitHub Copilot</div>
+        <div class="tool">Notion AI</div>
+        <div class="tool">Cursor AI</div>
+        <div class="tool">Note AI</div>
+     <div class="tool">Adobe Firefly</div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
